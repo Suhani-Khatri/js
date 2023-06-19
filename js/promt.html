@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p> Hy I am a player</p>
+    <script>
+        const para = document.querySelector("p");
+
+        para.addEventListener("click", updateName);
+
+        function updateName(){
+            const name = promt("Enter your name");
+            para.textContent = `Player 1: ${name}`
+        }
+    </script>
+</body>
+</html>

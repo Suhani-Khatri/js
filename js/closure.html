@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var d = 5;
+        const outerFun = (a) => {
+            let b = 10;
+            const innerFun = () => {
+                let sum = a + b + d;
+                console.log(`the sum of two numbers is ${sum}.`)
+            }
+            return innerFun;
+        }
+
+        let inner = outerFun(5);
+
+        console.dir(inner)
+
+        inner();
+    </script>
+</body>
+</html>

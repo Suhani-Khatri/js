@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+        let a = 5;
+        let b = a;
+
+        b = b+5;
+        console.log(a);  //a = 5
+        console.log(b);   //b = 10 here the value is updated even of b = a (pass by value)
+    </script> -->
+    <!-- <script>
+        const obj1 = {
+            name : "riya",
+            password : "xyz"
+        }
+
+        const obj2 = obj1;
+
+        obj2.password = "abc";
+
+        console.log(obj1);  //here password = abc 
+        console.log(obj2)   //here also password = abc  (pass by reference)
+    </script> -->
+
+    <script>
+        const arr1 = [1,2,3,4];
+
+        const arr2 = [].concat(arr1);
+
+        arr2.push(5);
+
+        console.log(arr1);
+        console.log(arr2);
+    </script>
+
+</body>
+</html>

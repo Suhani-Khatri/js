@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     
+    <script>
+        //promise produce
+        const pobj1 = new Promise((resolve, reject) => {
+            setTimeout( () => {
+                let roll_no = [1, 2, 3, 4, 5];
+                resolve(roll_no)
+                reject("Error while communicating")
+            }, 2000)
+        });
+
+        const getInformation = (indexdata) => {
+            return new Promise((resolve, reject) => {
+                setTimeout((indexdata) => {
+                    let getInfo = {
+                        name: 'vinod',
+                        age : 21
+                    }
+                    resolve(`My roll no is ${indexdata}. My name is ${getInfo.name}. I am ${getInfo.age} years old`)
+                }, 2000, indexdata)
+            })
+        }
+
+        //promise consume
+        //parameters will be same sa resolve function
+        // pobj1.then((rollno) => {
+        //     console.log(rollno);
+        //     return getInformation(rollno[1]);
+        //     }).then((data) => {
+        //         console.log(data);
+        //     }).catch((error) =>{
+        //     console.log(error);
+        //     })
+
+        async function getData(){
+            try{
+                const rollnodata = await pobj1;
+                console.log(rollnodata);
+
+                const information = await getInformation(rollnodata[1]);
+                console.log(informations);
+
+                return information;
+            }catch(error){
+                console.log(`The Error: ${error}`);
+            }
+            
+        }
+
+        const getname = getData().then((myname) => {
+            console.log(myname);
+        });
+        
+    </script>
+</body>
+</html>

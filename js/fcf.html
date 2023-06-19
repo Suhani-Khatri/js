@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- function is a first class citizen -->
+    <script>
+
+        //assign function to variable
+        // const  thankYou = function() {
+        //     console.log("Thankyou");
+        // }
+
+        // thankYou();
+
+        //passes function to object
+        // const youtube = {
+        //     name : "xyz ",
+        //     qualif: function(){
+        //         console.log("I did MCA ")
+        //     }
+        // }
+
+        // youtube.qualif();
+
+
+        //function as an arguments
+        const myName = () => {
+            return "Hello";
+        }
+
+        const greeting = (sayHi , name) => {    //parameters
+            console.log(sayHi() + " " + name);
+        }
+
+        greeting(myName, "xyz")
+
+        /* this explains how we are treating a function as a value .
+           The function that passes as a argument to another function , 
+           is called a callback function */
+
+
+        //we can return function as well(returning function)
+        function a() {
+            return function b(){
+                console.log("Thankyou sooo much");
+            }
+        }
+
+        //calling the above function
+        // a()();
+
+        const c = a();
+        c();
+    </script>
+</body>
+</html>
