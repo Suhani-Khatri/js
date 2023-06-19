@@ -1,0 +1,4 @@
+var name = prompt("What is your name?");
+if( name != " "){
+    document.write("Nice to meet you" + name);
+}

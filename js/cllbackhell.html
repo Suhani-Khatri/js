@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const getRollNo = () => {
+            setTimeout( () => {
+                console.log("API getting roll no")
+                let roll_no = [1, 2, 3, 4, 5];
+                console.log(roll_no);
+
+                setTimeout( (rollno) => {
+                    const information = {
+                        name : 'xyz',
+                        age : 26
+                    }
+                    console.log(`My roll no is ${rollno}. My name is ${information.name} 
+                    and I am ${information.age} years old`)
+
+                    setTimeout ( (name) => {
+                        information.gender = 'male';
+                        console.log(`My roll no is ${rollno}. My name is ${information.name} 
+                         and I am ${information.age} years old. My gender is ${information.male}`)
+
+                    }, 2000, information.name)
+                }, 2000, roll_no[1])
+            }, 2000)
+        }
+
+        getRollNo();
+    </script>
+</body>
+</html>

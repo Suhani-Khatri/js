@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const funA = () => {
+            setTimeout(function(){
+                console.log(`Welcome funA`)
+                funB();
+            }, 3000)
+        }
+
+        const funB = () => {
+            console.log(`Welcome funB`)
+        }
+
+        funA();
+        // funB();
+
+
+        const perOne = (friend, callfrd) => {
+            console.log(`I am busy right now . I am talking to 
+            ${friend}. I will call you back`)
+            callfrd();
+        }
+
+        const perTwo = () => {
+            console.log("Sorry that time I was busy somewhere else")
+        }
+
+        perOne("Thapa", perTwo);
+        // perTwo();
+    </script>
+</body>
+</html>

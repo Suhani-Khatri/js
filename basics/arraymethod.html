@@ -1,0 +1,65 @@
+<script>
+    let num = [1, 2, 3, 4, 5]
+    // let b = num.toString();
+    // console.log(typeof b)
+    let c = num.join("-")
+    console.log(c)
+    console.log(typeof c) 
+
+     let r = num.pop()   //remove elements from the last
+    console.log(r)
+
+     num.push(5)     //add element to the array and returns the array with new length
+    console.log(num)
+
+    let s = num.shift()  //removes first element ( removes from the front)
+    console.log(num)
+
+    let s2 = num.unshift(10)  //add element to the first 
+    console.log(num)
+
+    //delete operator(delete is not a method it is an operstor just like typeof)
+    let myarr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    delete myarr[0];   //shows the element is empty but it doesn't affect the length of array 
+    console.log(myarr)
+    console.log(myarr.length)  //length will be same(which is 9 in this case )
+
+
+    //concat the arrays
+    let num1 = [1, 2,3,4,5,6,7,8,9]
+    let num2 = [11,12,13,14,15,16,17,18,19]
+    let num_more = [21,22,23,24,25,26,27,28,29]
+
+    let newArry = num1.concat(num2, num_more) //it can add any numbers of arrays (newarry not in existing one)
+    console.log(newArry)
+
+    console.log(num1, num2)
+
+    //sort (changes in original array)
+
+    //for sorting in asc or desc we have to use the compare function
+    let compare = (a, b) => {
+    return a - b   //asc
+    // return b - a   //desc
+    }
+    let numbers = [551, 22 , 67, 89, 12, 3, 44, 78, 90]
+    numbers.sort(compare)   //will sort in numeric order 1, 2, 3, 4....
+    numbers.reverse()   //reverse the array
+    console.log(numbers)
+
+    //splice(adding new elements) and slice
+    //splice(2, 4, adding numbers)  (index, elements to be removed, adding new elements in place of removed elements)
+    let number =  [551, 22 , 67, 89, 12, 3, 44, 78, 90]
+    number.splice(2, 3, 101, 102, 103, 104, 105)   //returns the deleted value
+    console.log(number)
+    //(11) [551, 22, 101, 102, 103, 104, 105, 3, 44, 78, 90] - output
+
+
+    //slice (out a piece from an array)(new array)
+    let cut = [1,2,3,4,5,6,7,8,9]
+    let cuttedArray = cut.slice(2, 8)  //last index is not included
+    console.log(cuttedArray)
+
+
+
+</script>
